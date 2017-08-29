@@ -1,0 +1,8 @@
+
+•"squid:ClassVariableVisibilityCheck"]Make hashMapDataParams a static final constant or non-public and provide accessors if needed.(»ž¤€øÿÿÿÿ8òÝÑÇâ+
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(ëå€×8¤»ÐÇâ+
+Hsquid:S2386",Make member "hashMapDataParams" "protected".(âúŸ©8ŸÝàÇâ+
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(âúŸ©8ŸÝàÇâ+
+šsquid:S1319"yThe type of the "hashMapDataParams" object should be an interface such as "Map" rather than the implementation "HashMap".(»ž¤€øÿÿÿÿ8¤»ÐÇâ+
+Xsquid:S1444"7Make this "public static hashMapDataParams" field final(»ž¤€øÿÿÿÿ8òÝÑÇâ+
+ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜³âê8’û×Çâ+
