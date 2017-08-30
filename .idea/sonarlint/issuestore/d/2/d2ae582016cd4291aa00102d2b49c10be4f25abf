@@ -1,4 +1,7 @@
 
-Asquid:S2068" Remove this hard-coded password.(ÕµŠÔøÿÿÿÿ8¥ÈìÇâ+
-Tsquid:S1118":Add a private constructor to hide the implicit public one.(“³±ûÿÿÿÿ
+[squid:S1118":Add a private constructor to hide the implicit public one.(àş °şÿÿÿÿ8¼Š€äâ+
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(ùâëì8Éû‚ãâ+
 lsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¤‚+
+osquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(àş °şÿÿÿÿ8úíÛãâ+
+Usquid:S1118":Add a private constructor to hide the implicit public one.(‚Öí8œÛ…ãâ+
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(Ç–Íœ8ñŸÛââ+

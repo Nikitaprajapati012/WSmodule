@@ -13,12 +13,11 @@ import java.util.HashMap;
 
 public class HTTPApiRequest {
 
-    private static HashMap<String, String> hashMapDataParams;
-
+    // TODO: 30/8/17 apply for login request in AsyncTask
     public static void loginRequest(Context context, JsonRequest req,
                                     int apiCode, ApiResponse apiResponse) {
 
-        hashMapDataParams = new HashMap<>();
+        HashMap<String, String> hashMapDataParams = new HashMap<>();
         hashMapDataParams.put(Constants.RequestKey.EMAIL, req.getEmail());
         hashMapDataParams.put(Constants.RequestKey.PASWD, req.getPassword());
         //hashMapDataParams.put(Constants.RequestKey.DEVICE_TYPE, req.getDeviceType());
@@ -27,6 +26,6 @@ public class HTTPApiRequest {
         new BackgroundAsyncTask(context, hashMapDataParams,
                 Constants.APIURL.URL_LOGIN,
                 Constants.DialogMessage.PLEASE_WAIT, apiCode,
-                false).execute(apiResponse);
+                Constants.URL_METHOD.METHOD_POST, apiResponse).execute();
     }
 }

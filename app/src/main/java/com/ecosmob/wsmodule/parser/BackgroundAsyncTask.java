@@ -12,8 +12,7 @@ import com.ecosmob.wsmodule.interfaces.ApiResponse;
 
 import java.util.HashMap;
 
-/**
- * Created by nikita on 29/8/17.
+/** * Created by nikita on 29/8/17.
  */
 
 class BackgroundAsyncTask extends AsyncTask<String, String, String> {
@@ -21,22 +20,23 @@ class BackgroundAsyncTask extends AsyncTask<String, String, String> {
     public String urlResponse, DialogMsg, strURL;
     public HashMap<String, String> stringHashMap;
     public int apiCode;
-    public boolean isGetMethod;
+    public String isPostMethod;
     public ProgressDialog dialog;
     public ApiResponse apiResponse;
     public Utils utils;
     public FragmentManager fragmentManager;
 
+    // TODO: 30/8/17 Bind the required parameter and integrate the API.
     public BackgroundAsyncTask(Context context, HashMap<String, String> hashMapDataParams,
                                String urlResponse, String pleaseWait, int apiCode,
-                               boolean isGetMethod
-    ) {
+                               String isGetMethod, ApiResponse apiResponse) {
         this.mContext = context;
         this.stringHashMap = hashMapDataParams;
         this.urlResponse = urlResponse;
         this.DialogMsg = pleaseWait;
         this.apiCode = apiCode;
-        this.isGetMethod = isGetMethod;
+        this.isPostMethod = isGetMethod;
+        this.apiResponse = apiResponse;
         utils = new Utils(context);
     }
 
@@ -51,15 +51,13 @@ class BackgroundAsyncTask extends AsyncTask<String, String, String> {
 
     @Override
     protected String doInBackground(String... strings) {
-        if (isGetMethod) {
+        if (!isPostMethod.equalsIgnoreCase(Constants.URL_METHOD.METHOD_POST)) {
             strURL = Constants.APIURL.URL_LOGIN;
-            Utils.getResponseofGet(strURL);
+            return Utils.getResponseofGet(strURL);
         } else {
             strURL = Constants.APIURL.URL_LOGIN;
-            Utils.getResponseofPost(strURL, stringHashMap);
+            return Utils.getResponseofPost(strURL, stringHashMap);
         }
-        Log.d("REQUEST_URL", "@@" + strURL);
-        return strURL;
     }
 
     @Override
@@ -68,9 +66,5 @@ class BackgroundAsyncTask extends AsyncTask<String, String, String> {
         dialog.dismiss();
         Log.d("RESPONSE", "@@" + response);
         apiResponse.apiResponseCallBack(response, apiCode);
-    }
-
-    public void execute(ApiResponse apiResponse) {
-        this.apiResponse = apiResponse;
     }
 }

@@ -8,11 +8,14 @@ import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -52,6 +55,54 @@ public class Utils {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         final SharedPreferences.Editor editor = preferences.edit().remove(value);
         editor.apply();
+    }
+
+    public static String getResponseofDelete(String strURL) {
+        String response = "";
+        URL url = null;
+        try {
+            url = new URL(strURL);
+            HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();
+            httpCon.setDoOutput(true);
+            httpCon.setRequestProperty(
+                    "Content-Type", "application/x-www-form-urlencoded");
+            httpCon.setRequestMethod("DELETE");
+            httpCon.connect();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
+
+    public static String getResponseofPut(String strURL) {
+        String response = "";
+        URL url = null;
+        try {
+            url = new URL(strURL);
+            HttpURLConnection httpCon = null;
+            httpCon = (HttpURLConnection)
+                    url.openConnection();
+            httpCon.setDoOutput(true);
+            httpCon.setRequestMethod("PUT");
+            OutputStreamWriter out = new OutputStreamWriter(
+                    httpCon.getOutputStream());
+            out.write("Resource content");
+            out.close();
+            int responseCode = httpCon.getResponseCode();
+            Log.d("URL - ResponseCode", strURL + " - " + responseCode);
+            httpCon.getInputStream();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response;
     }
 
     public static String getResponseofPost(String strURL, HashMap<String, String> postDataParams) {

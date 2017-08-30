@@ -22,13 +22,14 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
 public class MainActivity extends AppCompatActivity implements ApiResponse {
+
+
     public String strEmail, strPasword, strDeviceId, strDeviceType;
     public Utils utils;
     public FragmentManager fragmentManager;
     public EditText edEmail, edPassword;
     public TextView txtLogin;
     public NetworkInfo info;
-    public ApiResponse apiResponse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +53,25 @@ public class MainActivity extends AppCompatActivity implements ApiResponse {
                 Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_SHORT).show();
                 strEmail = edEmail.getText().toString().trim();
                 strPasword = edPassword.getText().toString().trim();
-
-                if (info == null && !info.isConnected()) {
-                    Toast.makeText(MainActivity.this, "" + Constants.DialogMessage.NETWORK_ERROR, Toast.LENGTH_SHORT).show();
-                } else {
-                    JsonRequest jsonRequest = new JsonRequest();
-//                    jsonRequest.setDeviceId(strDeviceId);
-//                    jsonRequest.setDeviceType(strDeviceType);
-                    jsonRequest.setEmail(strEmail);
-                    jsonRequest.setPassword(strPasword);
-                    new HTTPApiRequest().loginRequest(MainActivity.this, jsonRequest, 1, apiResponse);
-                }
+                Log.d("VALUES", "@@" + strEmail + "----" + strPasword);
+                makeLogin();
             }
         });
+    }
+
+    // TODO: 30/8/17 make the login
+    private void makeLogin() {
+        if (info == null && !info.isConnected()) {
+            Toast.makeText(MainActivity.this, "" + Constants.DialogMessage.NETWORK_ERROR, Toast.LENGTH_SHORT).show();
+        } else {
+            JsonRequest jsonRequest = new JsonRequest();
+//                    jsonRequest.setDeviceId(strDeviceId);
+//                    jsonRequest.setDeviceType(strDeviceType);
+            jsonRequest.setEmail(strEmail);
+            jsonRequest.setPassword(strPasword);
+            new HTTPApiRequest().loginRequest(MainActivity.this,
+                    jsonRequest, Constants.API_CODE.API_LOGIN, this);
+        }
     }
 
     // TODO: 29/8/17 bind id with widget
@@ -77,8 +84,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponse {
     private void init() {
         fragmentManager = getSupportFragmentManager();
         utils = new Utils(MainActivity.this);
-        strEmail = "niki@ecosmob.com";
-        strPasword = "1234";
+
         // TODO: 29/8/17 get the device id
         strDeviceId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
         Log.d("strDeviceId", "@@" + strDeviceId);
@@ -95,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponse {
     @Override
     public void networkError(int apiCode) {
         Toast.makeText(this, "" + Constants.DialogMessage.NETWORK_ERROR, Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
@@ -109,7 +114,8 @@ public class MainActivity extends AppCompatActivity implements ApiResponse {
         try {
             Gson gson = new Gson();
             JsonRequest request = gson.fromJson(urlResponse, JsonRequest.class);
-            if (request != null) {
+
+            if (request == null) {
                 Toast.makeText(this, "" + Constants.DialogMessage.NULL_VALUE, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "SUCCESS!!", Toast.LENGTH_SHORT).show();

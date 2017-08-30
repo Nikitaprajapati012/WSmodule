@@ -1,7 +1,28 @@
 
-dsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í€—Ç
-;squid:S1068"&Remove this unused "sp" private field.(è¥úá
-dsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿîïö
+esquid:S2147"DCombine this catch with the one at line 71, which has the same body.(†Ñ„©ûÿÿÿÿ8İê—ã+
 lsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¤‚+
-?squid:S1068"+Remove this unused "context" private field.(êİç
+esquid:S2147"DCombine this catch with the one at line 98, which has the same body.(†Ñ„©ûÿÿÿÿ8ƒÜÛ—ã+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÌÚ—ã+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ƒÜÛ—ã+
+=squid:S1643"Use a StringBuilder instead.(«§Òıÿÿÿÿ8ê¥Ïíâ+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ƒÜÛ—ã+
+=squid:S1643"Use a StringBuilder instead.(«§Òıÿÿÿÿ8¢ÒËíâ+
+’squid:S1319"vThe type of the "postDataParams" object should be an interface such as "Map" rather than the implementation "HashMap".(ÏÄ×–8¢ÒËíâ+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İê—ã+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İê—ã+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¢ÒËíâ+
+`squid:S2147"DCombine this catch with the one at line 98, which has the same body.(ï­£Ä8ƒÜÛ—ã+
+osquid:S1192"SDefine a constant instead of duplicating this literal "URL - ResponseCode" 3 times.(Å¤î8Öëä—ã+
+dsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿîïö
+Jsquid:S1172".Remove this unused method parameter "context".(ÿÕ©§8®˜÷èâ+
+Vsquid:S1854"5Remove this useless assignment to local variable "s".(á©›¸şÿÿÿÿ8Ñ·Ğåâ+
+Gsquid:S1481"&Remove this unused "s" local variable.(ºàì‡şÿÿÿÿ8ª†Òåâ+
 isquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¡éüÿÿÿÿ
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÒÂé—ã+
+Msquid:S1068",Remove this unused "mContext" private field.(»úÅ¾øÿÿÿÿ8üúßåâ+
+`squid:S2147"DCombine this catch with the one at line 71, which has the same body.(ï­£Ä8İê—ã+
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğîƒïıÿÿÿÿ8ê¥Ïíâ+
+gsquid:S1192"FDefine a constant instead of duplicating this literal "UTF-8" 4 times.(¢…Ÿèüÿÿÿÿ8öáÑíâ+
+dsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í€—Ç
+Bsquid:S1068"&Remove this unused "sp" private field.(è¥úá8Ù»ã+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ê¥Ïíâ+

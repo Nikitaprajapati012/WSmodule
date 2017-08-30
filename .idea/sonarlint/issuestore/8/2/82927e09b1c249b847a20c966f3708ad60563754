@@ -1,0 +1,18 @@
+
+šsquid:S1319"yThe type of the "hashMapDataParams" object should be an interface such as "Map" rather than the implementation "HashMap".(º«†Íşÿÿÿÿ8°Ş¢ãâ+
+qsquid:S00116"TRename this field "DialogMsg" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…†ÿ½8¦Ó¸æâ+
+†"squid:ClassVariableVisibilityCheck"SMake apiCode a static final constant or non-public and provide accessors if needed.(›Ò¨å8Äæúäâ+
+Š"squid:ClassVariableVisibilityCheck"WMake isGetMethod a static final constant or non-public and provide accessors if needed.(üÀôá8Œñíâ+
+„"squid:ClassVariableVisibilityCheck"QMake utils a static final constant or non-public and provide accessors if needed.(…ûÕã8ÇçØíâ+
+ˆ"squid:ClassVariableVisibilityCheck"UMake DialogMsg a static final constant or non-public and provide accessors if needed.(…†ÿ½8½æëíâ+
+…"squid:ClassVariableVisibilityCheck"RMake strURL a static final constant or non-public and provide accessors if needed.(…†ÿ½8Ú¼áçâ+
+Š"squid:ClassVariableVisibilityCheck"WMake urlResponse a static final constant or non-public and provide accessors if needed.(…†ÿ½8¦Ó¸æâ+
+Csquid:S1659"'Declare "DialogMsg" on a separate line.(…†ÿ½8½æëíâ+
+–squid:S1319"uThe type of the "stringHashMap" object should be an interface such as "Map" rather than the implementation "HashMap".(Ù•°´üÿÿÿÿ8Äæúäâ+
+"squid:ClassVariableVisibilityCheck"WMake apiResponse a static final constant or non-public and provide accessors if needed.(ˆ–¤„ÿÿÿÿÿ8ù¤ñâ+
+@squid:S1659"$Declare "strURL" on a separate line.(…†ÿ½8¦Ó¸æâ+
+‘"squid:ClassVariableVisibilityCheck"YMake stringHashMap a static final constant or non-public and provide accessors if needed.(Ù•°´üÿÿÿÿ8Äæúäâ+
+Š"squid:ClassVariableVisibilityCheck"RMake dialog a static final constant or non-public and provide accessors if needed.(§öñ‹ÿÿÿÿÿ8Òà½æâ+
+†"squid:ClassVariableVisibilityCheck"TMake mContext a static final constant or non-public and provide accessors if needed.(Ù’ş8Äæúäâ+
+“"squid:ClassVariableVisibilityCheck"[Make fragmentManager a static final constant or non-public and provide accessors if needed.(Ëµ”æúÿÿÿÿ8½æëíâ+
+Ssquid:S1135"2Complete the task associated to this TODO comment.(Û¤…Ãıÿÿÿÿ8‡Œ ã+

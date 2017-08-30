@@ -30,9 +30,15 @@ public class Constants {
     }
 
     public class API_CODE {
-        public static final String API_LOGIN = "1";
-        public static final String API_REG = "2";
-        public static final String API_FORGOT = "3";
+        public static final int API_LOGIN = 1;
+        public static final int API_REG = 2;
+        public static final int API_FORGOT = 3;
     }
 
+    public class URL_METHOD {
+        public static final String METHOD_GET = "isGetMethod";
+        public static final String METHOD_POST = "isPostMethod";
+        public static final String METHOD_PUT = "isPutMethod";
+        public static final String METHOD_DELETE = "isDeleteMethod";
+    }
 }
